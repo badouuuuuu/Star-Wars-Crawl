@@ -13,6 +13,8 @@ body{
     width: 100%;
     display: grid;
     grid-template-columns: 10% 80% 10%;
+    height: 800px;
+    perspective: 400px;
 
 }
 
@@ -22,11 +24,23 @@ body{
     font-size: 40px;
     font-family: 'StarWars', sans-serif;
     color: #FFD700;
-    perspective: 100px;
     text-align: justify;
+    top: -100px;
+    position: relative;
+    transform-origin: 50px 100px;
+    animation: botToTop 60s linear;
     
 
 }
-.text-starwars p {
-    transform: rotateX(10deg);
+
+@keyframes botToTop{
+    0%{
+        top:700px;
+        transform: rotateX(15deg) translateZ(0);
+    }
+
+    100%{
+        top: -6000px;
+        transform: rotateX(20deg) translateZ(-2500px);
+    }
 }
