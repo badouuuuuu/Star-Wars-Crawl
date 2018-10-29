@@ -24,3 +24,7 @@ body{
     text-align: justify;
     letter-spacing: -5px;
 }
+
+p{
+    perspective: 100px;
+}
