@@ -6,25 +6,27 @@
 body{
     background-image: url(images/jake-weirick-581398-unsplash.jpg);
     background-size: cover;
+    overflow: hidden;
 }
 
 #container{
     width: 100%;
     display: grid;
     grid-template-columns: 10% 80% 10%;
+
 }
 
 .text-starwars{
     display: grid;
     grid-column: 2 / 3;
-    font-size: 60px;
+    font-size: 40px;
     font-family: 'StarWars', sans-serif;
     color: #FFD700;
     perspective: 100px;
     text-align: justify;
-    letter-spacing: -5px;
-}
+    
 
-p{
-    perspective: 100px;
+}
+.text-starwars p {
+    transform: rotateX(10deg);
 }
