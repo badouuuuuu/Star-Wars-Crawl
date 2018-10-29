@@ -1,0 +1,26 @@
+@font-face{
+    font-family: 'StarWars';
+    src: url('Starjedi.ttf') format('truetype');
+}
+
+body{
+    background-image: url(images/jake-weirick-581398-unsplash.jpg);
+    background-size: cover;
+}
+
+#container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+}
+
+.text-starwars{
+    display: grid;
+    grid-column: 2 / 3;
+    font-size: 60px;
+    font-family: 'StarWars', sans-serif;
+    color: #FFD700;
+    perspective: 100px;
+    text-align: justify;
+    letter-spacing: -5px;
+}
