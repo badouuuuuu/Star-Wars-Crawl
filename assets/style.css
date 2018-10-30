@@ -1,0 +1,48 @@
+@font-face{
+    font-family: 'StarWars';
+    src: url("./Starjedi.ttf") format('truetype');
+}
+
+body{
+    background-image: url(./images/jake-weirick-581398-unsplash.jpg);
+    background-size: cover;
+    overflow: hidden;
+
+}
+
+#container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    perspective: 30px;
+
+}
+
+.text-starwars{
+    display: grid;
+    grid-column: 2 / 3;
+    font-family: 'StarWars', sans-serif;
+    color: #FFD700;
+    text-align: justify;
+    top: 50px;
+    position: absolute;
+    transform-origin: 50px 100px;
+    animation: botToTop 80s infinite;
+    
+
+}
+.text-starwars p{
+    font-size: 100%;
+}
+
+@keyframes botToTop{
+    0%{
+        top:1000px;
+        transform: rotateX(15deg)  translateZ(0);
+    }
+
+    100%{
+        top: -2500px;
+        transform: rotateX(20deg)  translateY(-2500px);
+    }
+}
