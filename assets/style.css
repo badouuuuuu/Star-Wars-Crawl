@@ -28,11 +28,11 @@ body{
     position: absolute;
     transform-origin: 50px 100px;
     animation: botToTop 80s infinite;
-  
+    
+
 }
 .text-starwars p{
     font-size: 100%;
-
 }
 
 @keyframes botToTop{
