@@ -7,6 +7,7 @@ body{
     background-image: url(./images/jake-weirick-581398-unsplash.jpg);
     background-size: cover;
     overflow: hidden;
+
 }
 
 #container{
@@ -23,25 +24,25 @@ body{
     font-family: 'StarWars', sans-serif;
     color: #FFD700;
     text-align: justify;
-    top: -100px;
-    position: relative;
+    top: 50px;
+    position: absolute;
     transform-origin: 50px 100px;
-    animation: botToTop 120s linear;
-    
-
+    animation: botToTop 80s infinite;
+  
 }
 .text-starwars p{
-    font-size: 150%;
+    font-size: 100%;
+
 }
 
 @keyframes botToTop{
     0%{
-        top:700px;
+        top:1000px;
         transform: rotateX(15deg)  translateZ(0);
     }
 
     100%{
-        top: -6000px;
-        transform: rotateX(20deg)  translateZ(-2500px);
+        top: -2500px;
+        transform: rotateX(20deg)  translateY(-2500px);
     }
 }
