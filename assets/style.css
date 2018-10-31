@@ -4,45 +4,120 @@
 }
 
 body{
-    background-image: url(./images/jake-weirick-581398-unsplash.jpg);
+    margin: 0;
+    background-image: url(images/jake-weirick-581398-unsplash.jpg);
     background-size: cover;
     overflow: hidden;
 
 }
 
-#container{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 10% 80% 10%;
-    perspective: 30px;
-
-}
-
-.text-starwars{
-    display: grid;
-    grid-column: 2 / 3;
-    font-family: 'StarWars', sans-serif;
-    color: #FFD700;
-    text-align: justify;
-    top: 50px;
+.intro{
+    color: #00C4D9;
+    animation: intro 6s ease-out 1s;
     position: absolute;
-    transform-origin: 50px 100px;
-    animation: botToTop 80s infinite;
-    
-
+    z-index: 1;
+    top: 40%;
+    left: 25%;
+    font-weight: 400;
+    font-size: 300%;
+    opacity: 0;
 }
-.text-starwars p{
-    font-size: 100%;
-}
 
-@keyframes botToTop{
+
+@keyframes intro{
     0%{
-        top:1000px;
-        transform: rotateX(15deg)  translateZ(0);
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.becode-logo{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    z-index: 1;
+    margin: auto;
+    animation: becode-logo 9s ease-out 9s;
+    opacity: 0;
+}
+.becode-logo img{
+    width: inherit;
+}
+
+@keyframes becode-logo{
+    0%{
+        width: 18em;
+        transform: scale(2.75);
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+        width: 18em;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(0.1);
+        width: 18em;
+    }
+}
+
+#container{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transform: perspective(300px) rotateX(25deg);
+    transform-origin: 50% 100%;
+    text-align: justify;
+    position: absolute;
+    margin-left: -9em;
+    font-weight: bold;
+    font-size: 350%;
+    height: 50em;
+    width: 18em;
+    bottom: 0;
+    left: 50%;
+    color: goldenrod;
+}
+
+#container::after{
+    position: absolute;
+    content: ' ';
+    bottom: 60%;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+#text-starwars{
+    animation: scroll 100s linear 16s;
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+}
+
+#text-starwars h1, h2{
+    text-align: center;
+}
+
+@keyframes scroll{
+    0%{
+        top: 100%;
+        opacity: 1;
+    }
+
+    80%{
+        top: -170%;
+        opacity:1;
     }
 
     100%{
-        top: -2500px;
-        transform: rotateX(20deg)  translateY(-2500px);
+        top: -170%;
+        opacity:0;
     }
 }
